@@ -5,10 +5,7 @@ import LoginForm from "@/modules/session/components/LoginForm";
 const Login = () => {
     return(
         <Row>
-            <Col xs={0} sm={12} lg={16}>
-                <BackgroundSection />
-            </Col>
-            <Col xs={24} sm={12} lg={8}>
+            <Col xs={24} sm={24} lg={24}>
                 <SectionContainer>
                     <LoginForm />
                 </SectionContainer>

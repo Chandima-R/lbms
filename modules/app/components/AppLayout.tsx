@@ -6,6 +6,11 @@ import {useAtom} from "jotai";
 import {appLoadingAtom} from "@/modules/app/store/appStore";
 import {useRouter} from "next/router";
 import {sessionRoutes} from "@/modules/app/data";
+import TopBar from "@/modules/app/components/TopBar";
+import SideBar from "@/modules/app/components/SideBar";
+import {Layout} from "antd";
+
+const { Content, Footer } = Layout;
 
 // eslint-disable-next-line react/display-name
 const AppLayout = memo(({children}: AppLayoutProps) => {
@@ -42,9 +47,20 @@ const AppLayout = memo(({children}: AppLayoutProps) => {
     }
 
     return(
-        <div>
-            {children}
-        </div>
+        <Layout style={{ minHeight: '100vh' }}>
+            <SideBar />
+            <Layout>
+                <TopBar />
+                <Content>{children}</Content>
+                <Footer style={{ textAlign: 'center' }}>
+                    {'Copyright © '}
+                    <a color="inherit" href="#">
+                        Lower Body Management System
+                    </a>{' '}
+                    {new Date().getFullYear()}
+                </Footer>
+            </Layout>
+        </Layout>
     )
 })
 
