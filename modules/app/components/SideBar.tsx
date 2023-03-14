@@ -41,7 +41,7 @@ const SideBar = () => {
             >
                 <Menu.Item key="title" className="app-title">
                     <Link href="/profile">
-                        <img src="/images/cc-logo.svg" width={200} alt="Chameleon Collective" key={1} />
+                        <img src="/images/cc-logo.svg" width={200} alt="LBMS" key={1} />
                     </Link>
                 </Menu.Item>
 
